@@ -54,7 +54,6 @@ class Book extends React.Component {
 
     } // render end
 
-
 }
 
 export default Book;
