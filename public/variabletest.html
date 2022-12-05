@@ -1,0 +1,76 @@
+<!-- http://localhost:3000/variabletest.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script>
+
+// [배열]
+var arr = [1, "이", true];
+
+// ecma script 5버전까지 사용한 방법
+var a1 = arr[0];
+var b1 = arr[1];
+var c1 = arr[2];
+
+console.log(a1, b1, c1);
+
+// ecma script 6버전부터 사용 (destructuring - 비구조화)
+// 비구조화 문법 -> 위의 세 문장을 한 문장으로 표현
+const [a2, b2, c2] = arr; // 배열 = 배열
+
+console.log(a2, b2, c2);
+
+
+// [객체]
+var obj = {a:1, b:"이", c:true};
+
+// ecma script 5버전까지 사용한 방법
+// var a = obj.a;
+// var b = obj.b;
+// var c = obj.c;
+
+// console.log(a, b, c);
+
+// ecma script 6버전 이후 (destructuring - 비구조화)
+// 객체는 객체 내부에 들어갈 프로퍼티 변수와 이름을 동일하게 지정해야 함!
+//const{a, b, c} = obj;
+
+// 필요한 것만 비구조화해서 가져올 수 있음
+// const{a, b} = obj;
+// console.log(a, b);
+
+const{a, c} = obj;
+console.log(a, c);
+
+var arr1 = [1, 2, 3, 4, 5];
+// arr1의 복사본 생성 -> (... : spread 연산자)
+var newArr1 = [...arr1];
+
+// 복제 대신 대입
+//var newArr1 = arr1;
+
+newArr1[0] = 100;
+
+console.log(arr1 + " <-비교-> " + newArr1); // 1,2,3,4,5 <-비교-> 100,2,3,4,5
+
+var obj1 = {seq : 1, title : "제목", contents : "내용"};
+
+// 객체의 복사본 생성
+var newObj1 = {...obj1}
+
+newObj1.seq = 2;
+
+console.log(obj1.seq + "<-비교->" + newObj1.seq);
+
+</script>
+</head>
+
+<body>
+    
+</body>
+</html>
