@@ -15,7 +15,8 @@ import reportWebVitals from './reportWebVitals';
 //import EventComponent1 from './EventComponent1';
 //import EventComponent2 from './EventComponent2';
 //import LoginForm from './LoginForm';
-import Loop, {TotalUserInform} from './Loop_Form2';
+//import Loop, {TotalUserInform} from './Loop_Form2';
+import BoardList from './BoardList';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -38,7 +39,8 @@ root.render(
     <EventComponent2 name="리액트이벤트처리"/> */}
     {/* <LoginForm /> */}
     {/* <Loop /> */}
-    <TotalUserInform />
+    {/* <TotalUserInform /> */}
+    <BoardList />
   </React.StrictMode>
 );
 
